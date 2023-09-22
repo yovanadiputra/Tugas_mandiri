@@ -1,27 +1,37 @@
-import 'dart:io';
-
-
-class mahasiswa(){
+class Mahasiswa {
   String nama;
-  String nim;
+  int nim;
   String alamat;
-  String jenis_kelamin;
+  String jenisKelamin;
 
-  mahasiswa(this.nim, this.nama, this.alamat, this.jenis_kelamin);
+  Mahasiswa(this.nama, this.nim, this.alamat, this.jenisKelamin);
+
+  void displayMahasiswaInfo() {
+    print("Nama: $nama");
+    print("NIM: $nim");
+    print("Alamat: $alamat");
+    print("Jenis Kelamin: $jenisKelamin");
+    print(""); // Memberikan spasi antar objek
+  }
 }
 
+void main() {
+  // Membuat objek-objek dari kelas Mahasiswa
+  Mahasiswa mhs1 =
+      Mahasiswa("John Doe", 123456, "Jl. ABC No. 123", "Laki-laki");
+  Mahasiswa mhs2 =
+      Mahasiswa("Jane Smith", 789012, "Jl. XYZ No. 456", "Perempuan");
+  Mahasiswa mhs3 =
+      Mahasiswa("Mark Johnson", 345678, "Jl. DEF No. 789", "Laki-laki");
+  Mahasiswa mhs4 =
+      Mahasiswa("Emily Wilson", 901234, "Jl. UVW No. 012", "Perempuan");
+  Mahasiswa mhs5 =
+      Mahasiswa("Michael Brown", 567890, "Jl. GHI No. 345", "Laki-laki");
 
-
-void main(){
-  mahasiswa mhs1 = new mahasiswa("32210088", "yovan", "sepatan", "l");
-  mahasiswa mhs2 = new mahasiswa("322100112", "william", "poris", "l");
-  mahasiswa mhs3 = new mahasiswa("32210018", "albert", "poris", "l");
-  mahasiswa mhs4 = new mahasiswa("32210", "bry", "alsut", "l");
-  mahasiswa mhs5 = new mahasiswa("322100", "daniel", "tangerang", "l");
-}
-
-print("\nID Pegawai: ${mhs1.m}");
-  print("Nama: ${pegawai.nama}");
-  print("Gaji: ${pegawai.gaji}");
-  print("Total Gaji: $totalGaji");
+  // Menampilkan informasi mahasiswa
+  mhs1.displayMahasiswaInfo();
+  mhs2.displayMahasiswaInfo();
+  mhs3.displayMahasiswaInfo();
+  mhs4.displayMahasiswaInfo();
+  mhs5.displayMahasiswaInfo();
 }
